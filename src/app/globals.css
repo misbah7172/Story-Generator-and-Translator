@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 56% 91%; /* Soft beige #F5F5DC */
+    --foreground: 200 25% 20%; /* Dark Teal/Gray */
+    --card: 158 38% 88%; /* Muted green #D4E9E2 */
+    --card-foreground: 200 25% 20%; /* Dark Teal/Gray */
+    --popover: 158 38% 88%; /* Muted green */
+    --popover-foreground: 200 25% 20%; /* Dark Teal/Gray */
+    --primary: 180 100% 25%; /* Deep teal #008080 */
+    --primary-foreground: 60 56% 95%; /* Off-White/Very Light Beige */
+    --secondary: 36 31% 84%; /* Light brown #E1D8C9 */
+    --secondary-foreground: 180 100% 25%; /* Deep teal */
+    --muted: 36 31% 84%; /* Light brown */
+    --muted-foreground: 200 20% 45%; /* Grayish teal */
+    --accent: 180 100% 30%; /* Slightly lighter Deep teal */
+    --accent-foreground: 60 56% 95%; /* Off-White/Very Light Beige */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 60 56% 95%;
+    --border: 36 31% 78%; /* Slightly darker light brown for borders */
+    --input: 60 40% 94%; /* Creamy off-white for input backgrounds */
+    --ring: 180 100% 35%; /* Deep teal for focus rings */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    /* Sidebar variables - themed but not actively used by this app design */
+    --sidebar-background: 60 50% 93%; /* Lighter beige */
+    --sidebar-foreground: 200 25% 25%; /* Dark Teal/Gray */
+    --sidebar-primary: 180 100% 25%; /* Deep Teal */
+    --sidebar-primary-foreground: 60 56% 95%; /* Off-White */
+    --sidebar-accent: 158 35% 90%; /* Lighter Muted Green */
+    --sidebar-accent-foreground: 180 100% 25%; /* Deep Teal */
+    --sidebar-border: 36 31% 80%; /* Light Brown variant */
+    --sidebar-ring: 180 100% 35%; /* Deep Teal */
+  }
+
+  .dark {
+    --background: 200 15% 12%; /* Dark slate teal */
+    --foreground: 60 40% 88%; /* Light beige */
+    --card: 180 15% 18%; /* Darker teal */
+    --card-foreground: 60 40% 88%; /* Light beige */
+    --popover: 180 15% 18%;
+    --popover-foreground: 60 40% 88%;
+    --primary: 175 70% 55%; /* Brighter teal for dark mode primary */
+    --primary-foreground: 200 15% 12%; /* Dark slate teal, text on primary buttons */
+    --secondary: 36 20% 25%; /* Dark muted brown */
+    --secondary-foreground: 175 70% 55%; /* Brighter teal */
+    --muted: 36 20% 25%;
+    --muted-foreground: 60 30% 70%; /* Lighter muted beige/gray */
+    --accent: 175 70% 55%;
+    --accent-foreground: 200 15% 12%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 40% 88%;
+    --border: 36 15% 35%; /* Darker muted brown for borders */
+    --input: 200 10% 20%; /* Dark input background */
+    --ring: 175 70% 45%; /* Slightly less bright teal for rings */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Sidebar variables - dark theme */
+    --sidebar-background: 200 15% 10%; 
+    --sidebar-foreground: 60 40% 85%;
+    --sidebar-primary: 175 70% 50%;
+    --sidebar-primary-foreground: 200 15% 10%;
+    --sidebar-accent: 180 15% 15%;
+    --sidebar-accent-foreground: 175 70% 50%;
+    --sidebar-border: 36 15% 30%;
+    --sidebar-ring: 175 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-serif;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+}
